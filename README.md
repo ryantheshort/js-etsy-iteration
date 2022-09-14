@@ -40,11 +40,17 @@ After completing this assignment, you will be able to effectively use
 ## I'm a Web Developer Mode
 
 1. Show me how to calculate the average price of all items. Please `console.log` the average.
-```
+``` ///.map then .reduce// can chain these together if I want.
 The average price is $23.63
 ```
+
+const itemAvg = (arr, str) => arr.map(str==='price'? val=>val[str]:val=>0).reduce((sum,val)=>sum+val,0)/arr.length;
+console.log(itemAvg(items,'price'));
+
 2. Show me how to get an array of items that cost between $14.00 and $18.00 USD. Please `console.log` the answer.
 ```
+
+.filter
 "Items that cost between $14.00 USD and $18.00 USD:"
   [
    {
@@ -65,7 +71,8 @@ The average price is $23.63
    }
   ]
 ```
-3. Show me how find the item with a "GBP" currency code and print its name and price. Please `console.log` the one you find.
+3. Show me how find the item with a "GBP" currency code and print its name and price. Please `console.log` the one you find. 
+.filter /// .forEach
 ```
 1970s Schlitz Malt Liquor Glass Beer Pitcher costs £18
 ```
